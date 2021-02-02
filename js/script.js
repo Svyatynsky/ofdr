@@ -38,8 +38,7 @@ testWebP(function (support) {
 });
 
 var imageSlider = new Swiper('.example__container', {
-  slidesPerView: 4,
-  spaceBetween: 38,
+  slidesPerView: 1,
   autoHeight: true,
   speed: 700,
   // Navigation arrows
@@ -55,6 +54,20 @@ var imageSlider = new Swiper('.example__container', {
     invert: true,
     sensitivity: 1,
   },
+  breakpoints: {
+    600: {
+      slidesPerView: 2,
+      spaceBetween: 20
+    },
+    900: {
+      slidesPerView: 3,
+      spaceBetween: 28
+    },
+    1200: {
+      slidesPerView: 4,
+      spaceBetween: 38
+    },
+  }
 });
 baguetteBox.run('.example-gallery', {
   buttons: 'true'
